@@ -22,10 +22,15 @@ public class DriverFactory {
 
            if(browser.equalsIgnoreCase("chrome")){
                ChromeOptions options = new ChromeOptions();
-               if(headless.equalsIgnoreCase("true")){
+               options.addArguments("--disable-dev");
+               boolean isCI = System.getenv("CI") != null;
+               if (isCI){
                    options.addArguments("--headless=new");
+                   options.addArguments("--no-sandbox");
+                   options.addArguments("--disable-dev");
+                   options.addArguments("--disable-gpu");
+                   options.addArguments("--window-size=1920,1080");
                }
-               driver = new ChromeDriver(options);
            }
            driver.manage().window().maximize();
            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(timeout)));

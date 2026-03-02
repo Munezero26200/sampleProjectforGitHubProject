@@ -17,7 +17,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: Install chrome version
+      - name: Install chrome versions
         run: |
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
