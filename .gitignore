@@ -13,7 +13,7 @@ target/
 *.iml
 *.ipr
 
-### Eclipse ###
+### Eclipse java editor ###
 .apt_generated
 .classpath
 .factorypath
