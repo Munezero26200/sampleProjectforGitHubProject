@@ -10,5 +10,5 @@ Feature: Registration functionality
   Scenario: Verify that customer registers using valid credentials
     When the customer registers with the credentials
       | username | email        | password |
-      | PG1       | pG1@gmail.com | 123      |
-    Then account details Page shows username "PG1"
+      | Ps2      | ps2@gmail.com | 123      |
+    Then account details Page shows username "Ps2"
